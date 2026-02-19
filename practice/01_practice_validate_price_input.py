@@ -20,7 +20,9 @@ something that cannot be turned into a float, the program crashes.
 2. Add a try-except block that catches ValueError and prints
    "Invalid price. Please try again." instead of crashing.
 '''
-
-price_input = input("Enter the item price: ")
-price = float(price_input)
-print("Price recorded:", price)
+try:
+   price_input = input("Enter the item price: ")
+   price = float(price_input)
+   print("Price recorded:", price)
+except:
+   print("Ivalid")
